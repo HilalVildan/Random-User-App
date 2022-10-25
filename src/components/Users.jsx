@@ -23,7 +23,7 @@ const Users = ({ kullanici, setKullanici }) => {
             <div className="info">
               <div className="info-div info-isim">
                 <img src={picture.large} alt="" />
-                <p>
+                <p className="fw-bold">
                   {name.title} {name.first} {name.last}{" "}
                 </p>
               </div>
