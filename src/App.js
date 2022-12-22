@@ -1,19 +1,16 @@
 import Users from "./components/Users";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Buton from "./components/Buton";
-import "./App.css"
-import {useState} from 'react';
-
-
-
+import "./App.css";
+import { useState } from "react";
 
 function App() {
-  const [kullanici, setKullanici] = useState([]);
+  const [person, setPerson] = useState([]);
 
   return (
     <div className="container">
-      <Users kullanici={kullanici} setKullanici={setKullanici} />
-      <Buton kullanici={kullanici} setKullanici={setKullanici} />
+      <Users person={person} setPerson={setPerson} />
+      <Buton person={person} setPerson={setPerson} />
     </div>
   );
 }

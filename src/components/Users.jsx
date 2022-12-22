@@ -1,20 +1,20 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./Users.css";
 import axios from "axios";
 
-const Users = ({ kullanici, setKullanici }) => {
+const Users = ({ person, setPerson }) => {
   useEffect(() => {
     axios
       .get("https://randomuser.me/api/")
-      .then((res) => setKullanici(res.data.results))
+      .then((res) => setPerson(res.data.results))
       .catch((err) => console.log(err));
-  }, [setKullanici]);
+  }, [setPerson]);
 
-  console.log(kullanici);
+  console.log(person);
 
   return (
     <div className="container-user">
-      {kullanici.map((kisi) => {
+      {person.map((kisi) => {
         const { email, registered, cell, location, name, picture, id, dob } =
           kisi;
 
@@ -36,7 +36,7 @@ const Users = ({ kullanici, setKullanici }) => {
                 <i className="fa-solid fa-phone"></i>
                 <p>{cell}</p>
               </div>
-              <div className="info-div info-ülke">
+              <div className="info-div info-country">
                 <i className="fa-solid fa-location-pin"></i>
                 <p>
                   {location.city} / {location.country}
