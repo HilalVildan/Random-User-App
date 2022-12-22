@@ -38,4 +38,4 @@ $ yarn start
 
 #### [View Demo](https://randomuser-app-proj.netlify.app/)
 
-![Demo](./src/assets/demo.jpeg)
+![Demo](./random-user.gif)
